@@ -1,6 +1,6 @@
 # Beeldbronnen
 
-De dertien beelden in `foto/` zijn **geen eigen fotografie**. Het zijn foto's van
+De elf beelden in `foto/` zijn **geen eigen fotografie**. Het zijn foto's van
 Unsplash, uitgezocht op de briefing in [FOTOGRAFIE.md](FOTOGRAFIE.md) en door
 `stijl.py` in de huisstijl gezet. Ze staan er als plaatsvervanger, tot er een
 eigen shoot is.
@@ -24,7 +24,6 @@ dan vind je hem op `https://unsplash.com/photos/<id>`.
 | `hero` | 1603309288253-08db72e5117d | schouder en nek in strijklicht |
 | `rug` | 1712638932314-e2b185ca0930 | handen op de bovenrug, over een doek |
 | `linnen` | 1591625591034-75d303d2e1a4 | stapel gevouwen linnen op hout |
-| `olie-panorama` | 1654864471383-50ac3ed9b4f6 | glanzende huid, breed |
 | `salon-cel` | 1601059683522-02ae0eeff25c | stille ruimte, dun gordijn, kruk |
 | `locatie-cel` | 1630389715052-983a8e31faa6 | kamer bij avondlicht |
 | `olie-huid` | 1654781350550-0dc72ecb6fae | glanzende nek en bovenrug |
@@ -33,7 +32,6 @@ dan vind je hem op `https://unsplash.com/photos/<id>`.
 | `linnen-detail` | 1705290304455-35ffb433f560 | plooi van linnen met zoomdetail |
 | `hoek-schemer` | 1636321667799-ddf30b3e1261 | lamp in een hoek, gedempt |
 | `tafel-panorama` | 1565735852636-cbf956b1d01a | kamer bij avondlicht, licht achter het gordijn |
-| `nek-panorama` | 1615997380705-504484cd99c4 | handen op nek en bovenrug |
 
 Geen enkele foto toont een herkenbaar gezicht — dat was een eis uit de briefing
 en het scheelt bovendien gedoe met portretrecht.

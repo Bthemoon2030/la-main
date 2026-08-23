@@ -1,6 +1,6 @@
 # Fotografie — La Main
 
-De site heeft dertien beeldplekken. Daar staan nu foto's van Unsplash als
+De site heeft elf beeldplekken. Daar staan nu foto's van Unsplash als
 plaatsvervanger (zie [BEELDBRONNEN.md](BEELDBRONNEN.md)); die zijn bedoeld om
 vervangen te worden door eigen fotografie. Vooral de vier ruimte-opnames vragen
 erom: die tonen niet de salon.
@@ -22,7 +22,6 @@ Zit het zwaartepunt van je foto niet in het midden, pas dan `focus` aan in de ta
 | `hero.jpg` | breed, liggend | Schouder en nek in strijklicht. Huid groot in beeld, gezicht niet herkenbaar. Dit is het eerste dat iemand ziet. |
 | `rug.jpg` | staand 3:4 | Handen op de bovenrug, vingers in het weefsel. Het merkbeeld: dít is waar de naam vandaan komt. |
 | `linnen.jpg` | vierkant | Gevouwen linnen of een stapel handdoeken, van dichtbij. |
-| `olie-panorama.jpg` | panorama 21:9 | Olie die op de handpalm valt, of glanzende huid in warm licht. |
 | `salon-cel.jpg` | staand 4:5 | De behandelruimte. De tafel half in beeld, veel licht, weinig spullen. |
 | `locatie-cel.jpg` | staand 4:5 | Opgebouwde tafel in een woonkamer bij avondlicht. Donkerder van toon. |
 | `olie-huid.jpg` | staand 4:5 | Olie glanzend op een schouder of onderarm. |
@@ -31,7 +30,6 @@ Zit het zwaartepunt van je foto niet in het midden, pas dan `focus` aan in de ta
 | `linnen-detail.jpg` | staand 3:4 | Een plooi van het laken met licht dat eroverheen strijkt. |
 | `hoek-schemer.jpg` | staand 4:5 | Een hoek van de ruimte, een lamp, gedempt. Donkerder van toon. |
 | `tafel-panorama.jpg` | panorama 21:9 | De opgebouwde tafel op locatie, breed. Donkerder van toon. |
-| `nek-panorama.jpg` | panorama 21:9 | Nek en schouder, handen net in beeld. |
 
 De verhouding is een richtlijn: fotografeer ruim, het script snijdt bij. Lever aan op minstens 2000 pixels aan de lange zijde.
 

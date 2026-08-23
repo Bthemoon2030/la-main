@@ -53,10 +53,10 @@ vul het domein in bij **Settings → Pages → Custom domain**.
 | `index.html` | De opmaak van alle zes pagina's. |
 | `stijl.css` | Alle vormgeving, ingedeeld in acht genummerde blokken. |
 | `app.js` | Router, scroll-effecten en de volledige boekingsmodule. |
-| `foto/` | Dertien beelden. |
+| `foto/` | Elf beelden. |
 | `logo-lm.svg` | Het merkteken als vector. Zit ook als `<symbol>` in `index.html`. |
 | `logo.py` | Tekent `logo-lm.svg` opnieuw. |
-| `beeld.py` | Genereert de dertien plaatsvervangende beelden. |
+| `beeld.py` | Genereert plaatsvervangende beelden (niet meer in gebruik). |
 | `stijl.py` | Zet aangeleverde fotografie om in de huisstijl. |
 | `bundel.py` | Maakt er één bestand van: `la-main-compleet.html`. |
 | `README.md` | Praktische handleiding. |
@@ -153,7 +153,7 @@ of een eigen endpoint.
 
 ## 8. Fotografie — plaatsvervangers, geen eigen shoot
 
-De dertien beelden in `foto/` zijn foto's van Unsplash, uitgezocht op de
+De elf beelden in `foto/` zijn foto's van Unsplash, uitgezocht op de
 briefing hieronder en door `stijl.py` in de roze-gouden toon gezet. Ze zijn
 kosteloos en commercieel te gebruiken; de verantwoording per beeld staat in
 [BEELDBRONNEN.md](BEELDBRONNEN.md).

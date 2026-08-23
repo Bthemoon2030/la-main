@@ -130,7 +130,6 @@ PLEKKEN = {
   'hero':            dict(b=1800, h=1100, trap=T_PARELROZE, focus=(.5,.40), vaag=.004, kracht=.62, optillen=.13),
   'rug':             dict(b= 900, h=1200, trap=T_ROZE,      focus=(.5,.38), vaag=.004, optillen=.04, kracht=.52),
   'linnen':          dict(b= 900, h= 900, trap=T_LINNEN,    focus=(.5,.45), vaag=.005),
-  'olie-panorama':   dict(b=1800, h= 772, trap=T_GOUD,      focus=(.5,.62), vaag=.003),
   'salon-cel':       dict(b= 980, h=1240, trap=T_LINNEN,    focus=(.5,.42), vaag=.004, optillen=.05, kracht=.52),
   'locatie-cel':     dict(b= 980, h=1240, trap=T_SCHEMER,   focus=(.5,.42), vaag=.005, optillen=.06),
   'olie-huid':       dict(b= 880, h=1100, trap=T_GOUD,      focus=(.5,.42), vaag=.005),
@@ -139,7 +138,6 @@ PLEKKEN = {
   'linnen-detail':   dict(b= 900, h=1200, trap=T_STEEN,     focus=(.5,.42), vaag=.005),
   'hoek-schemer':    dict(b= 880, h=1100, trap=T_SCHEMER,   focus=(.5,.42), vaag=.005, optillen=.06),
   'tafel-panorama':  dict(b=1800, h= 772, trap=T_SCHEMER,   focus=(.5,.45), vaag=.004, optillen=.06),
-  'nek-panorama':    dict(b=1800, h= 772, trap=T_ROZE,      focus=(.5,.78), vaag=.003),
 }
 
 UITBREIDINGEN = ('.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.heic')
