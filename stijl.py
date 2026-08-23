@@ -128,18 +128,18 @@ def verwerk(bronpad, doelpad, breedte, hoogte, kleurtrap, *, focus=(0.5, 0.42),
 
 PLEKKEN = {
   'hero':            dict(b=1800, h=1100, trap=T_PARELROZE, focus=(.5,.40), vaag=.004, kracht=.62, optillen=.13),
-  'rug':             dict(b= 900, h=1200, trap=T_ROZE,      focus=(.5,.38), vaag=.005),
+  'rug':             dict(b= 900, h=1200, trap=T_ROZE,      focus=(.5,.38), vaag=.004, optillen=.04, kracht=.52),
   'linnen':          dict(b= 900, h= 900, trap=T_LINNEN,    focus=(.5,.45), vaag=.005),
-  'olie-panorama':   dict(b=1800, h= 772, trap=T_GOUD,      focus=(.5,.45), vaag=.004),
-  'salon-cel':       dict(b= 980, h=1240, trap=T_LINNEN,    focus=(.5,.42), vaag=.005, optillen=.12),
+  'olie-panorama':   dict(b=1800, h= 772, trap=T_GOUD,      focus=(.5,.62), vaag=.003),
+  'salon-cel':       dict(b= 980, h=1240, trap=T_LINNEN,    focus=(.5,.42), vaag=.004, optillen=.05, kracht=.52),
   'locatie-cel':     dict(b= 980, h=1240, trap=T_SCHEMER,   focus=(.5,.42), vaag=.005, optillen=.06),
   'olie-huid':       dict(b= 880, h=1100, trap=T_GOUD,      focus=(.5,.42), vaag=.005),
   'onderarm':        dict(b= 900, h=1200, trap=T_PARELROZE, focus=(.5,.42), vaag=.005),
-  'ruimte-panorama': dict(b=1800, h= 772, trap=T_LINNEN,    focus=(.5,.45), vaag=.004, optillen=.12),
+  'ruimte-panorama': dict(b=1800, h= 772, trap=T_LINNEN,    focus=(.5,.52), vaag=.0012, optillen=.02, kracht=.48, zachtheid=1.02, gloed_sterkte=.30),
   'linnen-detail':   dict(b= 900, h=1200, trap=T_STEEN,     focus=(.5,.42), vaag=.005),
   'hoek-schemer':    dict(b= 880, h=1100, trap=T_SCHEMER,   focus=(.5,.42), vaag=.005, optillen=.06),
   'tafel-panorama':  dict(b=1800, h= 772, trap=T_SCHEMER,   focus=(.5,.45), vaag=.004, optillen=.06),
-  'nek-panorama':    dict(b=1800, h= 772, trap=T_ROZE,      focus=(.5,.42), vaag=.004),
+  'nek-panorama':    dict(b=1800, h= 772, trap=T_ROZE,      focus=(.5,.78), vaag=.003),
 }
 
 UITBREIDINGEN = ('.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.heic')
@@ -161,7 +161,7 @@ if __name__ == '__main__':
     gedaan = gemist = 0
     for naam in gevraagd:
         if naam not in PLEKKEN:
-            print(f'  ?  {naam}: geen bekende plek op de site'); continue
+            print(f'  --  {naam}: geen bekende plek op de site'); continue
         bron = zoek(naam)
         if not bron:
             gemist += 1; continue
@@ -169,7 +169,7 @@ if __name__ == '__main__':
         b, h, t, focus = cfg.pop('b'), cfg.pop('h'), cfg.pop('trap'), cfg.pop('focus')
         doel = os.path.join(UIT, naam + '.jpg')
         verwerk(bron, doel, b, h, t, focus=focus, **cfg)
-        print(f'  ✓  {naam:16s} {os.path.getsize(doel)/1024:6.1f} kB')
+        print(f'  ok  {naam:16s} {os.path.getsize(doel)/1024:6.1f} kB')
         gedaan += 1
     print(f'\n{gedaan} foto\'s bewerkt, {gemist} plekken nog leeg.')
     if gemist:

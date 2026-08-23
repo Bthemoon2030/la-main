@@ -1,6 +1,9 @@
 # Fotografie — La Main
 
-De site heeft dertien beeldplekken. Nu staan daar gegenereerde vlakken; die zijn bedoeld om vervangen te worden door echte fotografie.
+De site heeft dertien beeldplekken. Daar staan nu foto's van Unsplash als
+plaatsvervanger (zie [BEELDBRONNEN.md](BEELDBRONNEN.md)); die zijn bedoeld om
+vervangen te worden door eigen fotografie. Vooral de vier ruimte-opnames vragen
+erom: die tonen niet de salon.
 
 ## Zo zet je een foto erin
 

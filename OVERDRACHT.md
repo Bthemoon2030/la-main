@@ -61,6 +61,7 @@ vul het domein in bij **Settings → Pages → Custom domain**.
 | `bundel.py` | Maakt er één bestand van: `la-main-compleet.html`. |
 | `README.md` | Praktische handleiding. |
 | `FOTOGRAFIE.md` | Briefing voor de fotograaf, per beeldplek. |
+| `BEELDBRONNEN.md` | Welke foto waar staat, en onder welke licentie. |
 
 De python-scripts zijn gereedschap, geen onderdeel van de site. Ze hoeven niet
 mee naar GitHub, maar het is handiger als ze bij het project blijven. Vereisen
@@ -150,28 +151,28 @@ of een eigen endpoint.
 
 ---
 
-## 8. Fotografie — het belangrijkste openstaande punt
+## 8. Fotografie — plaatsvervangers, geen eigen shoot
 
-De dertien beelden in `foto/` zijn **gegenereerd, niet gefotografeerd**. Zachte
-roze-gouden composities die als plaatsvervanger dienen. Ze zijn mooi, maar de
-site heeft daardoor geen onderwerp: geen handen, geen huid, geen ruimte. Dat is
-het verschil tussen een goede en een uitstekende site, en het is met code niet
-op te lossen.
+De dertien beelden in `foto/` zijn foto's van Unsplash, uitgezocht op de
+briefing hieronder en door `stijl.py` in de roze-gouden toon gezet. Ze zijn
+kosteloos en commercieel te gebruiken; de verantwoording per beeld staat in
+[BEELDBRONNEN.md](BEELDBRONNEN.md).
 
-Zodra er echte foto's zijn:
+Daarmee heeft de site een onderwerp: handen, huid, linnen, licht. Wat er nog
+niet is, is **de salon zelf**. De vier beelden van ruimtes tonen rustige
+interieurs, geen behandelkamer en geen opgebouwde tafel, terwijl de bijschriften
+dat wel beweren. Dat zijn de vier die als eerste vervangen moeten worden zodra er
+eigen fotografie is.
 
 ```bash
 # leg de bestanden in foto-bron/ met de naam van de plek
-python3 stijl.py
+python stijl.py
 ```
 
 Dat snijdt elke foto op de juiste verhouding, zet hem in de roze-gouden toon en
-schrijft hem naar `foto/`. Het werkt met foto's uit elke bron — eigen shoot,
-fotograaf, gelicentieerde stock — en levert altijd één samenhangende reeks.
-`FOTOGRAFIE.md` beschrijft per plek wat er hoort en hoe er gefotografeerd moet
-worden.
-
----
+schrijft hem naar `foto/`. `FOTOGRAFIE.md` beschrijft per plek wat er hoort en
+hoe er gefotografeerd moet worden. Loop na afloop de alt-teksten in `index.html`
+na — die beschrijven nu wat er op de plaatsvervangers staat.
 
 ## 9. Waar de kwaliteitslat ligt
 
