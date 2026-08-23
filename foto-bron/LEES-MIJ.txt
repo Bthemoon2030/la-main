@@ -1,0 +1,12 @@
+Leg hier je foto's neer met de naam van de plek waar ze horen:
+
+  hero.jpg            rug.jpg              linnen.jpg
+  olie-panorama.jpg   salon-cel.jpg        locatie-cel.jpg
+  olie-huid.jpg       onderarm.jpg         ruimte-panorama.jpg
+  linnen-detail.jpg   hoek-schemer.jpg     tafel-panorama.jpg
+  nek-panorama.jpg
+
+Draai daarna:  python3 stijl.py
+
+Het script snijdt de foto op maat, zet hem in de roze-gouden huisstijl
+en schrijft hem naar foto/. Zie FOTOGRAFIE.md voor wat er per plek hoort.
