@@ -19,36 +19,30 @@ map met beelden. Open `index.html` en het werkt.
 
 ---
 
-## 2. De eerste opdracht: publiceren
+## 2. Publiceren — gedaan
 
-De eigenaar wil de site op **GitHub Pages**, met een openbare link die hij
-kan delen. Dat is nog niet gebeurd.
-
-```bash
-# in de map met deze bestanden
-git init
-git add .
-git commit -m "La Main — eerste versie van de website"
-gh repo create la-main --public --source=. --push
-```
-
-Zet daarna Pages aan:
+De site staat online op **https://bthemoon2030.github.io/la-main/**, uit de
+repository **https://github.com/Bthemoon2030/la-main** (openbaar, tak `main`,
+map `/`). GitHub Pages bouwt automatisch opnieuw bij elke push:
 
 ```bash
-gh api -X POST repos/{owner}/la-main/pages \
-  -f "source[branch]=main" -f "source[path]=/"
+git add . && git commit -m "beschrijving" && git push
 ```
 
-Of via de interface: **Settings → Pages → Source: Deploy from a branch →
-`main` / `(root)`**. Na ongeveer een minuut staat de site op
-`https://<gebruikersnaam>.github.io/la-main/`.
+Na ongeveer een minuut is de wijziging live. Gecontroleerd na publicatie:
+`index.html`, `stijl.css`, `app.js`, `logo-lm.svg` en de beelden leveren alle
+een 200, de lettertypes van Google laden, en er staan geen absolute paden in de
+opmaak — daardoor werkt de site ook onder de submap `/la-main/`.
+
+**Let op bij pushen:** deze machine heeft ook een GitHub-account voor een ander
+project opgeslagen. Daarom staat in deze repository lokaal
+`credential.https://github.com.useHttpPath=true`, zodat git de inloggegevens van
+`Bthemoon2030` per repository onthoudt en niet het verkeerde account pakt. Niet
+weghalen.
 
 **Eigen domein:** voeg een bestand `CNAME` toe met alleen de domeinnaam erin,
-en zet bij de domeinprovider een CNAME-record naar `<gebruikersnaam>.github.io`.
-
-Controleer na publicatie of de lettertypes laden (Google Fonts) en of de
-beelden verschijnen — dat zijn de twee dingen die stuk kunnen gaan door een
-verkeerd pad.
+zet bij de domeinprovider een CNAME-record naar `bthemoon2030.github.io`, en
+vul het domein in bij **Settings → Pages → Custom domain**.
 
 ---
 

@@ -3,8 +3,11 @@
 Statische site voor een massagesalon in Eindhoven. Nederlandstalig, high-end.
 Geen build-stap, geen framework: `index.html` + `stijl.css` + `app.js` + `foto/`.
 
-**Lees `OVERDRACHT.md` voordat je iets wijzigt.** Daar staat de context, de
-openstaande punten en de opdracht die nog loopt (publiceren op GitHub Pages).
+Live op https://bthemoon2030.github.io/la-main/ — elke push naar `main`
+publiceert opnieuw.
+
+**Lees `OVERDRACHT.md` voordat je iets wijzigt.** Daar staat de context en de
+openstaande punten (fotografie, placeholders, echte boekingskoppeling).
 
 ## Drie dingen die je niet moet omgooien
 
