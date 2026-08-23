@@ -45,7 +45,7 @@ def snijden(img, breedte, hoogte, focus=(0.5, 0.42)):
 
 
 def graderen(a, kleurtrap, *, ontkleur=0.50, kracht=0.60, optillen=0.075,
-             zachtheid=0.90, warmte=1.0):
+             zachtheid=1.0, warmte=1.0):
     """
     a         : float-array H x W x 3, waarden 0..255
     ontkleur  : hoeveel van de oorspronkelijke kleur wordt weggenomen
@@ -82,7 +82,7 @@ def gloed(a, straal, sterkte, drempel=150):
     return 255 - (255 - a) * (255 - b * sterkte) / 255      # schermen
 
 
-def afwerken(a, W, H, rng, *, vaag=0.0, korrel=3.4, vignet=0.14, afwijking=1.004):
+def afwerken(a, W, H, rng, *, vaag=0.0, korrel=3.4, vignet=0.14, afwijking=1.0015):
     if vaag > 0:
         a = np.asarray(Image.fromarray(np.clip(a, 0, 255).astype(np.uint8), 'RGB')
                        .filter(ImageFilter.GaussianBlur(W * vaag))).astype(np.float32)
@@ -110,7 +110,7 @@ def afwerken(a, W, H, rng, *, vaag=0.0, korrel=3.4, vignet=0.14, afwijking=1.004
 
 
 def verwerk(bronpad, doelpad, breedte, hoogte, kleurtrap, *, focus=(0.5, 0.42),
-            vaag=0.006, gloed_straal=0.02, gloed_sterkte=0.5, kwaliteit=88, **grade):
+            vaag=0.0, gloed_straal=0.009, gloed_sterkte=0.16, kwaliteit=88, **grade):
     img = Image.open(bronpad).convert('RGB')
     img = snijden(img, breedte, hoogte, focus)
     a = np.asarray(img).astype(np.float32)
@@ -127,17 +127,17 @@ def verwerk(bronpad, doelpad, breedte, hoogte, kleurtrap, *, focus=(0.5, 0.42),
 # in de foto het zwaartepunt van de uitsnede ligt (0,0 = linksboven).
 
 PLEKKEN = {
-  'hero':            dict(b=1800, h=1100, trap=T_PARELROZE, focus=(.5,.40), vaag=.004, kracht=.62, optillen=.13),
-  'rug':             dict(b= 900, h=1200, trap=T_ROZE,      focus=(.5,.38), vaag=.004, optillen=.04, kracht=.52),
-  'linnen':          dict(b= 900, h= 900, trap=T_LINNEN,    focus=(.5,.45), vaag=.005),
-  'salon-cel':       dict(b= 980, h=1240, trap=T_LINNEN,    focus=(.5,.42), vaag=.004, optillen=.05, kracht=.52),
-  'locatie-cel':     dict(b= 980, h=1240, trap=T_SCHEMER,   focus=(.5,.42), vaag=.005, optillen=.06),
-  'olie-huid':       dict(b= 880, h=1100, trap=T_GOUD,      focus=(.5,.42), vaag=.005),
-  'onderarm':        dict(b= 900, h=1200, trap=T_PARELROZE, focus=(.5,.42), vaag=.005),
-  'ruimte-panorama': dict(b=1800, h= 772, trap=T_LINNEN,    focus=(.5,.52), vaag=.0012, optillen=.02, kracht=.48, zachtheid=1.02, gloed_sterkte=.30),
-  'linnen-detail':   dict(b= 900, h=1200, trap=T_STEEN,     focus=(.5,.42), vaag=.005),
-  'hoek-schemer':    dict(b= 880, h=1100, trap=T_SCHEMER,   focus=(.5,.42), vaag=.005, optillen=.06),
-  'tafel-panorama':  dict(b=1800, h= 772, trap=T_SCHEMER,   focus=(.5,.45), vaag=.004, optillen=.06),
+  'hero':            dict(b=2560, h=1564, trap=T_PARELROZE, focus=(.5,.40), kracht=.62, optillen=.13, kwaliteit=82),
+  'rug':             dict(b=1200, h=1600, trap=T_ROZE,      focus=(.5,.38), optillen=.04, kracht=.52),
+  'linnen':          dict(b=1200, h=1200, trap=T_LINNEN,    focus=(.5,.45)),
+  'salon-cel':       dict(b=1400, h=1771, trap=T_LINNEN,    focus=(.5,.42), optillen=.05, kracht=.52),
+  'locatie-cel':     dict(b=1400, h=1771, trap=T_SCHEMER,   focus=(.5,.42), optillen=.06),
+  'olie-huid':       dict(b=1200, h=1500, trap=T_GOUD,      focus=(.5,.42)),
+  'onderarm':        dict(b=1200, h=1600, trap=T_PARELROZE, focus=(.5,.42)),
+  'ruimte-panorama': dict(b=2560, h=1098, trap=T_LINNEN,    focus=(.5,.52), optillen=.02, kracht=.48, zachtheid=1.02, kwaliteit=82),
+  'linnen-detail':   dict(b=1200, h=1600, trap=T_STEEN,     focus=(.5,.42)),
+  'hoek-schemer':    dict(b=1200, h=1500, trap=T_SCHEMER,   focus=(.5,.42), optillen=.06),
+  'tafel-panorama':  dict(b=2560, h=1098, trap=T_SCHEMER,   focus=(.5,.45), optillen=.06, kwaliteit=82),
 }
 
 UITBREIDINGEN = ('.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.heic')

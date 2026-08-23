@@ -1,5 +1,5 @@
 /* ============================================================
-   CONFIGURATIE — hier past u alles aan
+   CONFIGURATIE — hier pas je alles aan
    ============================================================ */
 const CONFIG = {
   stad: 'Eindhoven',
@@ -17,15 +17,15 @@ const CONFIG = {
     { tot: Infinity, toeslag: null }
   ],
   behandelingen: [
-    { id:'onderhoud', naam:'Onderhoud',  duur:60,  prijs:90,
+    { id:'regulier',  naam:'Regulier',   duur:60,  prijs:90,
       kort:'Volledig lichaam, rustig tempo',
-      omschrijving:'De basis. Een volledige lichaamsmassage in rustig tempo, gericht op het losmaken van dagelijkse spanning in nek, schouders en onderrug. De behandeling waar de meeste mensen mee beginnen en waar de meeste mensen bij blijven.' },
+      omschrijving:'Een volledige lichaamsmassage in rustig tempo, gericht op het losmaken van spanning in nek, schouders en onderrug. De behandeling waar de meeste mensen mee beginnen.' },
     { id:'opmaat',    naam:'Op maat',    duur:90,  prijs:130, // PRIJS TE BEVESTIGEN
       kort:'Gericht op wat er die dag speelt',
-      omschrijving:'Anderhalf uur waarin er dieper op één of twee gebieden wordt gewerkt, zonder de rest over te slaan. Geschikt wanneer er een duidelijke klacht is: een vastzittende schouder, een overbelaste heup, een rug die niet loslaat.' },
+      omschrijving:'Anderhalf uur waarin er dieper op één of twee gebieden wordt gewerkt, zonder de rest over te slaan. Fijn als je een duidelijke klacht hebt: een vastzittende schouder, een overbelaste heup, een rug die niet loslaat.' },
     { id:'verdieping',naam:'Verdieping', duur:120, prijs:170, // PRIJS TE BEVESTIGEN
       kort:'Diep bindweefselwerk, volledige sessie',
-      omschrijving:'Twee uur diep bindweefselwerk voor wie structureel spanning vasthoudt. Langzaam opbouwend, met ruimte om tussendoor te ademen en na te komen. Niet bedoeld als eerste kennismaking.' }
+      omschrijving:'Twee uur diep bindweefselwerk, langzaam opgebouwd, met ruimte om tussendoor te ademen en na te komen. Kies deze als je al weet wat een massage met je doet.' }
   ],
   /* Mock-reisdata. Vervang later door een echte afstandsberekening. */
   postcodezones: [
@@ -238,7 +238,7 @@ function nav(terug, vooruit, label, kan){
 
 function vLocatie(){
   return `
-  <h2 class="d3" style="margin:0 0 30px">Waar wilt u behandeld worden?</h2>
+  <h2 class="d3" style="margin:0 0 30px">Waar wil je behandeld worden?</h2>
   <div class="keuzes">
     <button class="keuze ${S.locatie==='salon'?'gekozen':''}" data-loc="salon">
       <span class="vink">${pijl()}</span>
@@ -253,7 +253,7 @@ function vLocatie(){
       <span class="label">Op locatie</span>
       <span>
         <span class="d4" style="display:block;margin-bottom:8px">Thuis of op kantoor</span>
-        <span class="klein">Tafel en linnen gaan mee. Reistijd en reiskosten ziet u vooraf.</span>
+        <span class="klein">Tafel en linnen gaan mee. Reistijd en reiskosten zie je vooraf.</span>
       </span>
     </button>
   </div>
@@ -263,7 +263,7 @@ function vLocatie(){
 function vBehandeling(){
   return `
   <h2 class="d3" style="margin:0 0 10px">Welke behandeling?</h2>
-  <p class="klein" style="margin-bottom:30px">${S.locatie==='salon' ? 'In de salon in '+CONFIG.stad+'.' : 'Op uw eigen locatie.'}</p>
+  <p class="klein" style="margin-bottom:30px">${S.locatie==='salon' ? 'In de salon in '+CONFIG.stad+'.' : 'Op je eigen locatie.'}</p>
   <div>
     ${CONFIG.behandelingen.map(b=>`
       <button class="trt ${S.behandeling&&S.behandeling.id===b.id?'gekozen':''}" data-beh="${b.id}">
@@ -289,7 +289,7 @@ function vAdres(){
       paneel = `<div class="melding" style="margin-top:30px">
         <strong style="font-weight:400">${r.plaats}</strong> — circa ${r.min} minuten reistijd.
         Boven de 35 minuten maken we een afspraak op maat.
-        <a href="#/contact" style="text-decoration:underline">Neem contact op</a> en u krijgt binnen één werkdag een voorstel.
+        <a href="#/contact" style="text-decoration:underline">Neem contact op</a> en je krijgt binnen één werkdag een voorstel.
       </div>`;
     } else {
       const t = totaal();
@@ -371,8 +371,8 @@ function vMoment(){
 function vGegevens(){
   const f = S.fouten;
   return `
-  <h2 class="d3" style="margin:0 0 10px">Uw gegevens</h2>
-  <p class="klein" style="margin-bottom:34px">Deze gebruiken we alleen voor uw afspraak en de bevestiging.</p>
+  <h2 class="d3" style="margin:0 0 10px">Je gegevens</h2>
+  <p class="klein" style="margin-bottom:34px">Die gebruiken we alleen voor je afspraak en de bevestiging.</p>
   <div style="max-width:760px">
     <div class="veldrij groep">
       <div><label class="lbl" for="g-naam">Naam</label>
@@ -430,9 +430,9 @@ function vKlaar(){
   return `
   <div class="bevestigd">
     <div class="ring">${pijl()}</div>
-    <h2 class="d2" style="margin:0 0 22px;max-width:14ch">Uw afspraak staat genoteerd.</h2>
+    <h2 class="d2" style="margin:0 0 22px;max-width:14ch">Je afspraak staat genoteerd.</h2>
     <p class="lead" style="margin-bottom:30px">
-      ${langDatum(S.datum)} om ${S.tijd}, ${S.locatie==='salon' ? 'in de salon in '+CONFIG.stad : 'bij u op locatie'}.
+      ${langDatum(S.datum)} om ${S.tijd}, ${S.locatie==='salon' ? 'in de salon in '+CONFIG.stad : 'bij jou op locatie'}.
       Een bevestiging is onderweg naar ${esc(S.email)}.
     </p>
     <table class="tabel" style="max-width:460px">
@@ -489,9 +489,9 @@ function naarTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
 
 function valideer(){
   const f = {};
-  if(!S.naam.trim()) f.naam = 'Vul uw naam in.';
+  if(!S.naam.trim()) f.naam = 'Vul je naam in.';
   if(!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(S.email.trim())) f.email = 'Dit e-mailadres klopt niet.';
-  if(S.tel.replace(/\D/g,'').length < 9) f.tel = 'Vul een telefoonnummer in waarop u bereikbaar bent.';
+  if(S.tel.replace(/\D/g,'').length < 9) f.tel = 'Vul een telefoonnummer in waarop je bereikbaar bent.';
   if(S.locatie==='locatie' && !S.straat.trim()) f.straat = 'Vul de straatnaam in.';
   S.fouten = f;
   return Object.keys(f).length === 0;

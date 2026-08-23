@@ -24,7 +24,9 @@ openstaande punten (fotografie, placeholders, echte boekingskoppeling).
 
 Alles Nederlands, ook de namen van de behandelingen. Geen Franse of Engelse
 sfeerwoorden. Enige uitzondering: de salonnaam La Main. De klant wordt met
-*u* aangesproken. Toon: rustig, weinig woorden, geen superlatieven.
+*je* aangesproken — niet met u. Toon: rustig, weinig woorden, geen
+superlatieven, en **geen druk**: niets over herhaling, onderhoud of hoe vaak
+iemand zou moeten komen. Dat schrikt klanten af.
 
 ## Let op
 

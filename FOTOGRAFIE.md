@@ -37,7 +37,7 @@ De verhouding is een richtlijn: fotografeer ruim, het script snijdt bij. Lever a
 
 **Licht.** Eén zachte bron van opzij — een raam met dun gordijn, of een softbox met diffusie. Nooit frontaal, nooit twee bronnen. Het beeld leeft van de overgang tussen licht en schaduw over een ronding.
 
-**Lens.** 50 tot 85 mm, wijd open (f/1.4 – f/2.8). Focus op één punt en laat de rest wegvallen. Onscherpte mag; de site is erop gebouwd.
+**Lens.** 50 tot 85 mm, wijd open (f/1.4 – f/2.8). Focus op één punt en laat de rest wegvallen. Onscherpte in de achtergrond mag, maar het onderwerp moet scherp zijn: de bewerking vervaagt sinds augustus 2026 niets meer.
 
 **Belichting.** Fotografeer een halve stop te licht. Het merk is zacht en licht, niet dramatisch.
 

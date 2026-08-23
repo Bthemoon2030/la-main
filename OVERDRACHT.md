@@ -99,11 +99,19 @@ Alles in het Nederlands, ook de namen van de behandelingen. **Geen Franse of
 Engelse sfeerwoorden** — geen *signature treatment*, geen *booking*, geen
 *Le Rituel*. De enige uitzondering is de naam van de salon zelf: La Main.
 
-De behandelingen heten **Onderhoud** (60 min), **Op maat** (90 min) en
-**Verdieping** (120 min), genoemd naar wat ze doen.
+De behandelingen heten **Regulier** (60 min), **Op maat** (90 min) en
+**Verdieping** (120 min).
+
+De pay-off is **"De massage die je verdient."**
 
 Toon: rustig, zelfverzekerd, weinig woorden. Geen uitroeptekens, geen
-superlatieven. De klant wordt met *u* aangesproken.
+superlatieven. De klant wordt met *je* aangesproken.
+
+**Leg geen druk op herhaling.** De eerste versie van de site verkocht massage
+als noodzakelijk onderhoud dat je met regelmaat moest volhouden — compleet met
+een vergelijking met de kapper en de sportschool. Dat werkte afschrikkend en is
+er in augustus 2026 uit gehaald. Eén keer komen mag ook; dat staat nu
+letterlijk op de homepagina. Schrijf niets terug in die richting.
 
 ---
 
