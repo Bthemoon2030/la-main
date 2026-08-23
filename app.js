@@ -106,19 +106,30 @@ window.addEventListener('hashchange', route);
 /* ============================================================
    REVEAL + NAV
    ============================================================ */
-let io;
-function observeAll(){
-  if(!io){
-    io = new IntersectionObserver(es=>{
-      es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    },{rootMargin:'0px 0px -8% 0px',threshold:.05});
-  }
-  $$('.pagina.aan .rv:not(.in), .pagina.aan .onthul:not(.in)').forEach(el=>io.observe(el));
+/* De onthulling gaat bewust NIET via IntersectionObserver. Een element met
+   .onthul staat op clip-path:inset(0 0 100%) en heeft daardoor geen zichtbaar
+   oppervlak; de waarnemer meldde zo'n element nooit als zichtbaar, waardoor het
+   masker nooit openging en het beeld voorgoed leeg bleef. Een rechtstreekse
+   meting van de positie heeft daar geen last van. */
+const DREMPEL = 0.92; // een element onthult zodra de bovenkant 92% van het scherm passeert
+function toonWatInBeeldIs(){
+  $$('.pagina.aan .rv:not(.in), .pagina.aan .onthul:not(.in)').forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight * DREMPEL) el.classList.add('in');
+  });
 }
-function onScroll(){ $('#nav').classList.toggle('vast', window.scrollY > 40); }
+let wacht = false;
+function observeAll(){ toonWatInBeeldIs(); }
+function onScroll(){
+  $('#nav').classList.toggle('vast', window.scrollY > 40);
+  if(wacht) return;
+  wacht = true;
+  requestAnimationFrame(()=>{ wacht = false; toonWatInBeeldIs(); });
+}
 
 
 window.addEventListener('scroll', onScroll, {passive:true});
+window.addEventListener('resize', toonWatInBeeldIs, {passive:true});
+window.addEventListener('load', toonWatInBeeldIs);
 $('#hamburger').addEventListener('click', ()=> document.body.classList.toggle('menu-open'));
 
 /* ============================================================
