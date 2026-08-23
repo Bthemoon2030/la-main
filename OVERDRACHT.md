@@ -184,7 +184,7 @@ afgekeurd omdat ze te sjabloonachtig waren. Wat is afgesproken:
 - Beeld mag door de kolom heen breken en over sectiegrenzen schuiven
 - Eén beweging voor de hele site: beeld komt onder een masker vandaan
 - De accentkleur (klei, `#A96F52`) wordt spaarzaam maar zichtbaar gebruikt:
-  figuurnummers, sectienummers, de onderstreping in de navigatie, focusranden
+  sectielabels, sectienummers, de onderstreping in de navigatie, focusranden
 - De cursieve Bodoni komt precies één keer voor, in het citaat op de homepagina
 
 Bij twijfel: liever één sterk, ongebruikelijk idee consequent doorgevoerd dan

@@ -157,7 +157,6 @@ p{margin:0 0 1.1em}p:last-child{margin-bottom:0}
 
 /* bijschrift: staat in de margekolom naast het beeld, niet eronder */
 .bijschrift{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--inkt-42);line-height:1.7}
-.bijschrift b{font-weight:400;color:var(--klei);display:block}
 figcaption.onder{margin-top:12px}
 
 /* ---------- 5 · navigatie ---------------------------------- */
