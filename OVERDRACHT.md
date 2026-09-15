@@ -245,6 +245,11 @@ daarvan overgenomen).
   eroverheen scrolt. **Geen `overflow:hidden` op `.intro`**, anders plakt er
   niets. Onder 900 px werkt het effect ook, kleiner gezet; de hoogte gebruikt
   `svh` zodat het blok niet verspringt als de adresbalk in- of uitschuift.
+- **Vergelijkversie:** `nieuw-zonder-scroll/` is exact `nieuw/` van vóór het
+  scrolleffect (commit d6bf0a1): losse collage, geen vaste kop, geen bruine
+  waas onder de navigatie. Alleen bedoeld om te vergelijken; wijzigingen aan
+  de planner of teksten gaan niet automatisch mee. Verwijder de map zodra er
+  gekozen is.
 - Staat op `noindex`. De kamerfoto's bij "In de salon" en "Op locatie" zijn
   plaatsvervangers, niet de echte salon.
 
