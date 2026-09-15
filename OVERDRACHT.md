@@ -239,6 +239,11 @@ daarvan overgenomen).
   "La Main Eindhoven" slaat afspraken wel op.
 - Knoppen met `data-kies` (salon/locatie) en de behandelingen
   (`data-kies-beh`) vullen de planner voor.
+- Scrolleffect zoals op de inspiratiesite: in "Rust begint bij aandacht"
+  blijft `.intro-plak` (kop, tekst, drie vage foto's) een schermhoogte lang
+  staan met `position:sticky`, terwijl `.intro-zweef` met scherpe foto's
+  eroverheen scrolt. **Geen `overflow:hidden` op `.intro`**, anders plakt er
+  niets. Onder 900 px valt het effect weg en staat alles onder elkaar.
 - Staat op `noindex`. De kamerfoto's bij "In de salon" en "Op locatie" zijn
   plaatsvervangers, niet de echte salon.
 
