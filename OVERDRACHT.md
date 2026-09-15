@@ -243,7 +243,8 @@ daarvan overgenomen).
   blijft `.intro-plak` (kop, tekst, drie vage foto's) een schermhoogte lang
   staan met `position:sticky`, terwijl `.intro-zweef` met scherpe foto's
   eroverheen scrolt. **Geen `overflow:hidden` op `.intro`**, anders plakt er
-  niets. Onder 900 px valt het effect weg en staat alles onder elkaar.
+  niets. Onder 900 px werkt het effect ook, kleiner gezet; de hoogte gebruikt
+  `svh` zodat het blok niet verspringt als de adresbalk in- of uitschuift.
 - Staat op `noindex`. De kamerfoto's bij "In de salon" en "Op locatie" zijn
   plaatsvervangers, niet de echte salon.
 
