@@ -77,7 +77,12 @@ p,h1,h2,h3,h4,dl,dd{margin:0}
 /* ---------- navigatie ---------- */
 .nav{position:fixed;top:0;left:0;right:0;z-index:50;color:var(--wit);
   background:linear-gradient(180deg,rgba(33,21,14,.55),rgba(33,21,14,0));transition:background .45s var(--zacht)}
-.nav.vast,body.menu-open .nav{background:rgba(40,27,20,.97)}
+/* Na het scrollen: een bruine band die zacht uitloopt over de pagina. */
+.nav.vast{background:transparent}
+.nav::before{content:"";position:absolute;left:0;right:0;top:0;bottom:-48px;z-index:-1;pointer-events:none;opacity:0;
+  background:linear-gradient(180deg,rgba(40,27,20,.97) 0%,rgba(40,27,20,.92) 58%,rgba(40,27,20,0) 100%);transition:opacity .45s var(--zacht)}
+.nav.vast::before{opacity:1}
+body.menu-open .nav{background:rgba(40,27,20,.97)}
 .nav-binnen{height:92px;padding:0 clamp(20px,4.4vw,64px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
   transition:height .45s var(--zacht)}
 .nav.vast .nav-binnen{height:72px}
@@ -109,25 +114,33 @@ p,h1,h2,h3,h4,dl,dd{margin:0}
 .hero .zin{font-size:clamp(20px,1.8vw,25px);line-height:1.5;color:rgba(255,255,255,.92)}
 .knoppen{display:flex;flex-wrap:wrap;gap:16px 22px;justify-content:center;margin-top:44px}
 
-/* ---------- intro met collage ---------- */
-.intro{position:relative;min-height:1000px;display:grid;place-items:center;padding:clamp(80px,10vw,140px) 20px;overflow:hidden}
+/* ---------- intro: vaste kop, foto's schuiven eroverheen ---------- *
+   De tekst en drie vage foto's blijven een schermhoogte lang staan
+   (sticky); een tweede laag scherpe foto's scrolt er intussen
+   overheen. Let op: geen overflow:hidden op .intro, anders plakt
+   er niets.                                                        */
+.intro{position:relative;background:var(--wit);--plak:max(100svh,680px)}
+.intro-plak{position:sticky;top:0;height:var(--plak);display:grid;place-items:center;overflow:hidden;padding:90px 20px 40px}
 .los{position:absolute;overflow:hidden}
-.los::after{content:"";position:absolute;inset:0}
-.los.l::after{background:linear-gradient(90deg,rgba(255,255,255,.5),rgba(255,255,255,0) 60%)}
-.los.r::after{background:linear-gradient(270deg,rgba(255,255,255,.5),rgba(255,255,255,0) 60%)}
-.los.o::after{background:linear-gradient(0deg,rgba(255,255,255,.55),rgba(255,255,255,0) 55%)}
-.c1{left:3.9%;top:10%;width:20.8%;aspect-ratio:3/4}
-.c2{right:4.4%;top:6.5%;width:18.8%;aspect-ratio:27/33}
-.c3{left:6.7%;bottom:4%;width:17.4%;aspect-ratio:25/32}
-.c4{right:3.9%;bottom:3%;width:18.8%;aspect-ratio:3/4}
-.intro-tekst{position:relative;z-index:2;max-width:900px;text-align:center}
+.vaag{opacity:.32}
+.v1{left:4%;top:15%;width:17%;aspect-ratio:3/4}
+.v2{right:5%;top:11%;width:15%;aspect-ratio:4/5}
+.v3{right:13%;bottom:5%;width:13%;aspect-ratio:3/4}
+.intro-tekst{position:relative;z-index:1;max-width:900px;text-align:center}
 .intro h2{font-family:var(--kap);font-weight:400;font-size:clamp(44px,7vw,100px);line-height:1.02;letter-spacing:.01em;text-transform:uppercase;margin:22px 0 34px;text-wrap:balance}
 .intro .tekst{max-width:600px;margin:0 auto;font-size:clamp(19px,1.6vw,23px);line-height:1.55;color:var(--inkt-zacht)}
+.intro-zweef{position:relative;z-index:2;height:calc(var(--plak) * 1.9);margin-top:calc(var(--plak) * -1);pointer-events:none}
+.intro-zweef .los{box-shadow:0 20px 44px rgba(53,38,29,.14)}
+.z1{left:5%;top:calc(var(--plak) * .8);width:21%;aspect-ratio:3/4}
+.z2{right:6%;top:calc(var(--plak) * 1.02);width:19%;aspect-ratio:4/5}
+.z3{left:17%;top:calc(var(--plak) * 1.42);width:15%;aspect-ratio:3/4}
+.z4{right:19%;top:calc(var(--plak) * 1.5);width:18%;aspect-ratio:4/3}
 @media(max-width:900px){
-  .intro{display:block;min-height:0}
-  .collage{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:520px;margin:0 auto 44px}
-  .intro .los{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:auto}
-  .intro .c3,.intro .c4{display:none}
+  .intro-plak{position:relative;height:auto;display:block;padding:80px 20px 44px}
+  .vaag{display:none}
+  .intro-zweef{height:auto;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:560px;margin:0 auto;padding:0 20px 80px}
+  .intro-zweef .los{position:relative;left:auto;right:auto;top:auto;width:auto;box-shadow:none}
+  .intro-zweef .z3,.intro-zweef .z4{display:none}
 }
 
 /* ---------- twee manieren ---------- */
@@ -313,16 +326,21 @@ p,h1,h2,h3,h4,dl,dd{margin:0}
 </section>
 
 <section class="intro" id="over">
-  <div class="collage" aria-hidden="true">
-    <div class="los l c1"><img class="foto" src="../foto/rug.jpg" alt=""></div>
-    <div class="los r c2"><img class="foto" src="../foto/linnen.jpg" alt=""></div>
-    <div class="los o c3"><img class="foto" src="../foto/onderarm.jpg" alt=""></div>
-    <div class="los r c4"><img class="foto" src="../foto/olie-huid.jpg" alt=""></div>
+  <div class="intro-plak">
+    <div class="los vaag v1" aria-hidden="true"><img class="foto" src="../foto/linnen.jpg" alt=""></div>
+    <div class="los vaag v2" aria-hidden="true"><img class="foto" src="../foto/linnen-detail.jpg" alt=""></div>
+    <div class="los vaag v3" aria-hidden="true"><img class="foto" src="../foto/hoek-schemer.jpg" alt=""></div>
+    <div class="intro-tekst">
+      <p class="kl">Een uur dat helemaal van jou is</p>
+      <h2>Rust begint<br>bij aandacht</h2>
+      <p class="tekst">Bij La Main krijg je een massage in alle rust, afgestemd op wat jouw lichaam die dag nodig heeft. In de salon in Eindhoven, of op een plek die jij kiest.</p>
+    </div>
   </div>
-  <div class="intro-tekst">
-    <p class="kl">Een uur dat helemaal van jou is</p>
-    <h2>Rust begint<br>bij aandacht</h2>
-    <p class="tekst">Bij La Main krijg je een massage in alle rust, afgestemd op wat jouw lichaam die dag nodig heeft. In de salon in Eindhoven, of op een plek die jij kiest.</p>
+  <div class="intro-zweef" aria-hidden="true">
+    <div class="los z1"><img class="foto" src="../foto/rug.jpg" alt=""></div>
+    <div class="los z2"><img class="foto" src="../foto/olie-huid.jpg" alt=""></div>
+    <div class="los z3"><img class="foto" src="../foto/onderarm.jpg" alt=""></div>
+    <div class="los z4"><img class="foto" src="../foto/salon-cel.jpg" alt=""></div>
   </div>
 </section>
 
