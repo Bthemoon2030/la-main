@@ -231,9 +231,11 @@ daarvan overgenomen).
 
 - `nieuw/index.html` is de bron; de foto's komen uit de gedeelde map `foto/`
   (`../foto/…`), er staan geen kopieën in `nieuw/`.
-- Letters: Pinyon Script (naam en titels), Prata (kapitalen), Cormorant
-  Garamond (tekst), Montserrat (kleine koppen). Het LM-logo staat ongewijzigd
-  midden in de navigatie.
+- Letters (sinds 15-09 "versie 1 · Strak"): Prata-kapitalen voor de naam,
+  de titels en de grote koppen; rechte Cormorant Garamond voor tekst (geen
+  cursief); Montserrat voor kleine koppen. De schrijfletter (Pinyon Script)
+  is eruit. Het LM-logo staat ongewijzigd midden in de navigatie.
+  `nieuw-zonder-scroll/` heeft nog de oude schrijfletter.
 - Dezelfde planner als in `presentatie/`, met hetzelfde `CONFIG`-blok en
   dezelfde voorlopige bedragen. Op GitHub een proefversie; de Claude-Artifact
   "La Main Eindhoven" slaat afspraken wel op.
