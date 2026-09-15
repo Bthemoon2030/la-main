@@ -222,6 +222,26 @@ horizontaal doorbladert, een warmtebeeld op canvas.
   `<head>` en `<body>`.
 - Voor echte klanten is een boekingsdienst of backend nodig (zie §6).
 
+### `nieuw/` — homepagina in espresso en ivoor
+
+Sinds 15-09-2026 staat er ook een nieuwe homepagina op
+**https://bthemoon2030.github.io/la-main/nieuw/**, gebouwd naar opzet H
+(look en feel geïnspireerd op jessicavanduren.com; geen teksten of beelden
+daarvan overgenomen).
+
+- `nieuw/index.html` is de bron; de foto's komen uit de gedeelde map `foto/`
+  (`../foto/…`), er staan geen kopieën in `nieuw/`.
+- Letters: Pinyon Script (naam en titels), Prata (kapitalen), Cormorant
+  Garamond (tekst), Montserrat (kleine koppen). Het LM-logo staat ongewijzigd
+  midden in de navigatie.
+- Dezelfde planner als in `presentatie/`, met hetzelfde `CONFIG`-blok en
+  dezelfde voorlopige bedragen. Op GitHub een proefversie; de Claude-Artifact
+  "La Main Eindhoven" slaat afspraken wel op.
+- Knoppen met `data-kies` (salon/locatie) en de behandelingen
+  (`data-kies-beh`) vullen de planner voor.
+- Staat op `noindex`. De kamerfoto's bij "In de salon" en "Op locatie" zijn
+  plaatsvervangers, niet de echte salon.
+
 ---
 
 ## 11. Handige commando's
