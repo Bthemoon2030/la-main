@@ -200,7 +200,31 @@ tien veilige.
 
 ---
 
-## 10. Handige commando's
+## 10. Losse presentatie in `presentatie/`
+
+Sinds 15-09-2026 staat er een aparte presentatie met afspraakplanner op
+**https://bthemoon2030.github.io/la-main/presentatie/**. Die volgt bewust
+**niets** van de huisstijl hierboven (op verzoek: alleen logo, naam en wat ze
+doet): donkere wijnkleur, Gilda Display + Hanken Grotesk, zes bladen die je
+horizontaal doorbladert, een warmtebeeld op canvas.
+
+- `presentatie/index.html` is de bron; alles zit in dat ene bestand.
+- Staat op `noindex`, maar is via de link openbaar te openen.
+- Planner: salon en op locatie, reiskosten per postcode (schatting:
+  hemelsbreed × 1,35 vanaf het centrum van Eindhoven), vrije tijden per 30 min.
+  Alle bedragen, tijden en het werkgebied staan in `CONFIG` bovenin het
+  laatste script. **Voorlopig:** € 130/€ 170 voor 90/120 min, ma–vr 09–19,
+  € 0,39/km en toeslag 0/15/30.
+- Op GitHub is het een **proefversie**: bevestigen toont de bevestiging maar
+  slaat niets op. Dezelfde pagina draait ook als Claude-Artifact met de
+  `db`-capability; daar worden afspraken wél opgeslagen en is er een
+  agenda-overzicht. Die versie is het bestand zonder `<!doctype>`, `<html>`,
+  `<head>` en `<body>`.
+- Voor echte klanten is een boekingsdienst of backend nodig (zie §6).
+
+---
+
+## 11. Handige commando's
 
 ```bash
 python3 bundel.py       # alles in één bestand voor doorsturen of bekijken
