@@ -8,12 +8,12 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Prata&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    LA MAIN — homepagina met afspraakplanner
-   Espresso en ivoor. Schrijfletter voor de naam en titels, hoge
-   klassieke kapitalen voor koppen, Cormorant voor tekst, kleine
+   Espresso en ivoor. Strakke klassieke kapitalen (Prata) voor de naam,
+   titels en koppen, rechte Cormorant voor tekst, kleine
    koppen in gespatieerde Montserrat. Bewust één thema.
    ============================================================ */
 :root{
@@ -33,7 +33,6 @@
   --licht-lijn:rgba(251,248,243,.18);
   --fout:#9E3B2E;
 
-  --script:"Pinyon Script","Snell Roundhand",cursive;
   --kap:"Prata","Didot",Georgia,serif;
   --serif:"Cormorant Garamond","Garamond",Georgia,serif;
   --sans:"Montserrat","Helvetica Neue",Arial,sans-serif;
@@ -110,7 +109,7 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
 .hero-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.8) sepia(.18) brightness(.92)}
 .hero .waas{position:absolute;inset:0;background:linear-gradient(180deg,rgba(33,21,14,.8) 0%,rgba(33,21,14,.34) 28%,rgba(33,21,14,.42) 64%,rgba(33,21,14,.86) 100%)}
 .hero-inhoud{position:relative;z-index:1;max-width:980px}
-.hero .naam{font-family:var(--script);font-weight:400;font-size:clamp(96px,16vw,236px);line-height:1.1;margin:8px 0 6px}
+.hero .naam{font-family:var(--kap);font-weight:400;font-size:clamp(50px,10.3vw,148px);line-height:1.02;letter-spacing:.1em;text-indent:.1em;text-transform:uppercase;margin:26px 0 24px}
 .hero .zin{font-size:clamp(20px,1.8vw,25px);line-height:1.5;color:rgba(255,255,255,.92)}
 .knoppen{display:flex;flex-wrap:wrap;gap:16px 22px;justify-content:center;margin-top:44px}
 
@@ -158,7 +157,7 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
 .midden{text-align:center}
 .twee{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);margin-top:clamp(36px,4vw,54px)}
 .twee .beeld{aspect-ratio:600/440;overflow:hidden}
-.script-titel{font-family:var(--script);font-weight:400;font-size:clamp(52px,4.6vw,66px);line-height:1.15;margin:30px 0 12px}
+.titel-kap{font-family:var(--kap);font-weight:400;font-size:clamp(26px,2.5vw,36px);line-height:1.15;letter-spacing:.07em;text-transform:uppercase;margin:34px 0 14px}
 .twee p{font-size:clamp(19px,1.5vw,22px);line-height:1.55;color:var(--inkt-zacht);max-width:540px;margin-bottom:30px}
 @media(max-width:800px){.twee{grid-template-columns:1fr}}
 
@@ -180,7 +179,7 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
 .rij{display:block;width:100%;padding:20px 0;border-top:1px solid var(--lijn);transition:padding-left .45s var(--zacht)}
 .rij:hover{padding-left:10px}
 .rijen-lijst .rij:last-child{border-bottom:1px solid var(--lijn)}
-.rij b{display:flex;justify-content:space-between;gap:16px;font-style:italic;font-weight:500;font-size:clamp(28px,2.4vw,34px);line-height:1.15}
+.rij b{display:flex;justify-content:space-between;gap:16px;font-weight:500;font-size:clamp(28px,2.4vw,34px);line-height:1.15}
 .rij b i{font-style:normal;font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--inkt-flauw);align-self:center}
 .rij span{display:block;font-size:19px;color:var(--inkt-zacht);margin-top:4px}
 .vanaf{font-size:22px;margin:30px 0 32px}
@@ -197,7 +196,7 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
 .afspraak-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,6vw,100px);align-items:start}
 .afspraak-links{display:grid;gap:22px;align-content:start;position:sticky;top:110px}
 .afspraak-links .kl{color:var(--licht-zacht)}
-.afspraak .script-groot{font-family:var(--script);font-weight:400;font-size:clamp(68px,7.4vw,110px);line-height:1.05}
+.afspraak .titel-groot{font-family:var(--kap);font-weight:400;font-size:clamp(38px,4.3vw,62px);line-height:1.1;letter-spacing:.04em;text-transform:uppercase;text-wrap:balance}
 .afspraak-links .tekst{font-size:clamp(19px,1.6vw,23px);line-height:1.55;color:rgba(251,248,243,.86)}
 .afspraak-links .klein{font-size:17px;color:var(--licht-zacht)}
 .volgt{border-bottom:1px dashed currentColor}
@@ -210,7 +209,7 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
 /* ---------- planner ---------- */
 .paneel{background:var(--ivoor);color:var(--inkt);padding:clamp(22px,3vw,44px)}
 .p-kop{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:16px;margin-bottom:24px;border-bottom:1px solid var(--lijn)}
-.p-kop h3{font-style:italic;font-weight:500;font-size:clamp(28px,2.4vw,34px);line-height:1.1;text-wrap:balance}
+.p-kop h3{font-weight:500;font-size:clamp(28px,2.4vw,34px);line-height:1.1;text-wrap:balance}
 .p-stap{color:var(--inkt-flauw);white-space:nowrap}
 .p-voet{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:28px;padding-top:20px;border-top:1px solid var(--lijn)}
 .p-voet .rechts{margin-left:auto}
@@ -221,8 +220,8 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
   transition:border-color .35s var(--zacht),background .35s var(--zacht)}
 .keuze:hover{border-color:var(--inkt)}
 .keuze[aria-pressed="true"]{border-color:var(--espresso);background:var(--zand);box-shadow:inset 0 0 0 1px var(--espresso)}
-.keuze .k-script{font-family:var(--script);font-size:40px;line-height:1.2}
-.keuze .k-titel{font-style:italic;font-weight:500;font-size:26px;line-height:1.2}
+.keuze .k-kap{font-family:var(--kap);font-size:21px;letter-spacing:.06em;text-transform:uppercase;line-height:1.3;margin-bottom:4px}
+.keuze .k-titel{font-weight:500;font-size:26px;line-height:1.2}
 .keuze .k-tekst{font-size:17px;line-height:1.45;color:var(--inkt-zacht)}
 .keuze.met-prijs{grid-template-columns:minmax(0,1fr) auto;column-gap:16px}
 .keuze .k-prijs{grid-column:2;grid-row:1/3;align-self:center;font-family:var(--kap);font-size:22px}
@@ -249,7 +248,7 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
 .reis .noot{font-size:15px;color:var(--inkt-flauw);padding:10px 0 14px;border-top:1px solid var(--lijn)}
 
 .kal-kop{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.kal-kop h4{font-style:italic;font-weight:500;font-size:26px}
+.kal-kop h4{font-weight:500;font-size:26px}
 .kal-nav{display:flex;gap:6px}
 .rond{width:38px;height:38px;border:1px solid var(--lijn-sterk);border-radius:50%;display:grid;place-items:center;transition:border-color .3s,opacity .3s}
 .rond:hover:not([disabled]){border-color:var(--inkt)}
@@ -262,7 +261,7 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
 .kal .dag[disabled]{border-color:transparent;background:transparent;color:rgba(53,38,29,.28);cursor:default}
 .kal .dag.vol{text-decoration:line-through}
 .kal .dag[aria-pressed="true"]{background:var(--espresso);color:var(--ivoor);border-color:var(--espresso)}
-.tijden-kop{margin:24px 0 10px;font-style:italic;font-size:22px}
+.tijden-kop{margin:24px 0 10px;font-weight:500;font-size:22px}
 .tijden{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:6px}
 .tijd{height:44px;border:1px solid var(--lijn-sterk);background:var(--wit);text-align:center;font-size:19px;font-variant-numeric:lining-nums tabular-nums;transition:border-color .3s,background .3s}
 .tijd:hover{border-color:var(--inkt)}
@@ -284,9 +283,9 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
 .lade-achter{position:fixed;inset:0;z-index:90;background:rgba(28,18,12,.55)}
 .lade{position:fixed;top:0;right:0;bottom:0;z-index:95;width:min(580px,100%);overflow-y:auto;background:var(--ivoor);color:var(--inkt);padding:28px clamp(20px,3vw,40px) 40px}
 .lade-kop{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--lijn)}
-.lade-kop h2{font-family:var(--script);font-weight:400;font-size:56px;line-height:1.1}
+.lade-kop h2{font-family:var(--kap);font-weight:400;font-size:30px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;margin-top:6px}
 .lade-status{padding-top:16px;font-size:17px;color:var(--inkt-zacht)}
-.dagkop{font-style:italic;font-weight:500;font-size:26px;margin:28px 0 4px}
+.dagkop{font-weight:500;font-size:26px;margin:28px 0 4px}
 .item{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--lijn)}
 .item-tijd{font-size:19px;font-variant-numeric:lining-nums tabular-nums}
 .item-tijd span{display:block;font-size:15px;color:var(--inkt-zacht)}
@@ -360,13 +359,13 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
     <div class="twee">
       <article>
         <div class="beeld"><img class="foto" src="../foto/salon-cel.jpg" alt="Een stille ruimte met daglicht door een dun gordijn"></div>
-        <h3 class="script-titel">In de salon</h3>
+        <h3 class="titel-kap">In de salon</h3>
         <p>Een stille ruimte in Eindhoven, alleen voor jou. Je komt binnen, de deur gaat dicht en de rest van de dag wacht buiten.</p>
         <button type="button" class="knop rand" data-kies="salon">Plan in de salon</button>
       </article>
       <article>
         <div class="beeld"><img class="foto" src="../foto/locatie-cel.jpg" alt="Een kamer bij avondlicht"></div>
-        <h3 class="script-titel">Op locatie</h3>
+        <h3 class="titel-kap">Op locatie</h3>
         <p>De massage komt naar je toe, thuis of op een plek die jij kiest. Reistijd en reiskosten zie je vooraf.</p>
         <button type="button" class="knop rand" data-kies="locatie">Bereken je reiskosten</button>
       </article>
@@ -402,7 +401,7 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
   <div class="wrap afspraak-grid">
     <div class="afspraak-links">
       <p class="kl">Tot snel</p>
-      <h2 class="script-groot">Maak een afspraak</h2>
+      <h2 class="titel-groot">Maak een afspraak</h2>
       <p class="tekst">Kies online een moment dat bij je past. Op locatie zie je de reiskosten meteen.</p>
       <div class="samenvatting" id="samenvatting"></div>
       <p class="klein">Eerst een vraag? Telefoon en e-mail <span class="volgt">volgen</span>.</p>
@@ -722,8 +721,8 @@ body.menu-open .nav{background:rgba(40,27,20,.97)}
   function stapHtml(id, f){
     if(id === 'waar'){
       return '<div class="keuzes">' +
-        '<button type="button" class="keuze" data-actie="soort" data-waarde="salon" aria-pressed="' + (S.soort === 'salon') + '"><span class="k-script">In de salon</span><span class="k-tekst">Een stille ruimte in Eindhoven.</span></button>' +
-        '<button type="button" class="keuze" data-actie="soort" data-waarde="locatie" aria-pressed="' + (S.soort === 'locatie') + '"><span class="k-script">Op locatie</span><span class="k-tekst">Thuis, of een plek die jij kiest. Reiskosten zie je vooraf.</span></button>' +
+        '<button type="button" class="keuze" data-actie="soort" data-waarde="salon" aria-pressed="' + (S.soort === 'salon') + '"><span class="k-kap">In de salon</span><span class="k-tekst">Een stille ruimte in Eindhoven.</span></button>' +
+        '<button type="button" class="keuze" data-actie="soort" data-waarde="locatie" aria-pressed="' + (S.soort === 'locatie') + '"><span class="k-kap">Op locatie</span><span class="k-tekst">Thuis, of een plek die jij kiest. Reiskosten zie je vooraf.</span></button>' +
         '</div>';
     }
     if(id === 'behandeling'){
