@@ -200,60 +200,21 @@ tien veilige.
 
 ---
 
-## 10. Losse presentatie in `presentatie/`
+## 10. Deze repository is niet meer de echte site
 
-Sinds 15-09-2026 staat er een aparte presentatie met afspraakplanner op
-**https://bthemoon2030.github.io/la-main/presentatie/**. Die volgt bewust
-**niets** van de huisstijl hierboven (op verzoek: alleen logo, naam en wat ze
-doet): donkere wijnkleur, Gilda Display + Hanken Grotesk, zes bladen die je
-horizontaal doorbladert, een warmtebeeld op canvas.
+**De website van La Main staat sinds 01-10-2026 op https://la-main.nl**, in een
+eigen repository onder haar eigen GitHub-account: **La-main/website**. Werkmap op
+de pc: `C:\Users\Robbi\Projects\la-main-nl` (zie `LEES-MIJ.md` daar). Boeken loopt
+straks via Cal.com en de Google Agenda van `info@la-main.nl`.
 
-- `presentatie/index.html` is de bron; alles zit in dat ene bestand.
-- Staat op `noindex`, maar is via de link openbaar te openen.
-- Planner: salon en op locatie, reiskosten per postcode (schatting:
-  hemelsbreed × 1,35 vanaf het centrum van Eindhoven), vrije tijden per 30 min.
-  Alle bedragen, tijden en het werkgebied staan in `CONFIG` bovenin het
-  laatste script. **Voorlopig:** € 130/€ 170 voor 90/120 min, ma–vr 09–19,
-  € 0,39/km en toeslag 0/15/30.
-- Op GitHub is het een **proefversie**: bevestigen toont de bevestiging maar
-  slaat niets op. Dezelfde pagina draait ook als Claude-Artifact met de
-  `db`-capability; daar worden afspraken wél opgeslagen en is er een
-  agenda-overzicht. Die versie is het bestand zonder `<!doctype>`, `<html>`,
-  `<head>` en `<body>`.
-- Voor echte klanten is een boekingsdienst of backend nodig (zie §6).
+Wat hier staat is de **oude** site van zes pagina's uit augustus 2026. Die is nog
+bereikbaar op https://bthemoon2030.github.io/la-main/ — weghalen of doorsturen kan
+zodra dat niemand meer stoort.
 
-### `nieuw/` — homepagina in espresso en ivoor
-
-Sinds 15-09-2026 staat er ook een nieuwe homepagina op
-**https://bthemoon2030.github.io/la-main/nieuw/**, gebouwd naar opzet H
-(look en feel geïnspireerd op jessicavanduren.com; geen teksten of beelden
-daarvan overgenomen).
-
-- `nieuw/index.html` is de bron; de foto's komen uit de gedeelde map `foto/`
-  (`../foto/…`), er staan geen kopieën in `nieuw/`.
-- Letters (sinds 15-09 "versie 1 · Strak"): Prata-kapitalen voor de naam,
-  de titels en de grote koppen; rechte Cormorant Garamond voor tekst (geen
-  cursief); Montserrat voor kleine koppen. De schrijfletter (Pinyon Script)
-  is eruit. Het LM-logo staat ongewijzigd midden in de navigatie.
-  `nieuw-zonder-scroll/` heeft nog de oude schrijfletter.
-- Dezelfde planner als in `presentatie/`, met hetzelfde `CONFIG`-blok en
-  dezelfde voorlopige bedragen. Op GitHub een proefversie; de Claude-Artifact
-  "La Main Eindhoven" slaat afspraken wel op.
-- Knoppen met `data-kies` (salon/locatie) en de behandelingen
-  (`data-kies-beh`) vullen de planner voor.
-- Scrolleffect zoals op de inspiratiesite: in "Rust begint bij aandacht"
-  blijft `.intro-plak` (kop, tekst, drie vage foto's) een schermhoogte lang
-  staan met `position:sticky`, terwijl `.intro-zweef` met scherpe foto's
-  eroverheen scrolt. **Geen `overflow:hidden` op `.intro`**, anders plakt er
-  niets. Onder 900 px werkt het effect ook, kleiner gezet; de hoogte gebruikt
-  `svh` zodat het blok niet verspringt als de adresbalk in- of uitschuift.
-- **Vergelijkversie:** `nieuw-zonder-scroll/` is exact `nieuw/` van vóór het
-  scrolleffect (commit d6bf0a1): losse collage, geen vaste kop, geen bruine
-  waas onder de navigatie. Alleen bedoeld om te vergelijken; wijzigingen aan
-  de planner of teksten gaan niet automatisch mee. Verwijder de map zodra er
-  gekozen is.
-- Staat op `noindex`. De kamerfoto's bij "In de salon" en "Op locatie" zijn
-  plaatsvervangers, niet de echte salon.
+De presentatie (`presentatie/`), de nieuwe homepagina (`nieuw/`) en de
+vergelijkversie (`nieuw-zonder-scroll/`) zijn op 01-10-2026 hier weggehaald: ze
+liepen achter op de echte site en waren openbaar bereikbaar. Terughalen kan via de
+geschiedenis: `git log --diff-filter=D --name-only`.
 
 ---
 
